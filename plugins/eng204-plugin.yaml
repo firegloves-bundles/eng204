@@ -1,0 +1,20 @@
+kind: "EntandoPlugin"
+apiVersion: "entando.org/v1"
+metadata:
+  name: "eng204-plugin"
+spec:
+  image: lcorsettientando/eng-204:0.0.1-SNAPSHOT
+  replicas: 1
+  dbms: mysql
+  parameters: {}
+  ingressPath: "/eng204"
+  healthCheckPath: "/management/health"
+  securityLevel: "strict"
+  connectionConfigNames: []
+  permissions: []
+  roles:
+  - name: eng204-admin
+    code: eng204-admin
+  - name: conference-admin
+    code: "conference-admin"
+# entando-needle-descriptor-add-roles - Entando blueprint will add roles here
