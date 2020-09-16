@@ -3,7 +3,7 @@ apiVersion: "entando.org/v1"
 metadata:
   name: "eng204-plugin"
 spec:
-  image: lcorsettientando/eng-204:1
+  image: lcorsettientando/eng204:1
   replicas: 1
   dbms: mysql
   parameters: {}
